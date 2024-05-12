@@ -2,9 +2,9 @@
 
 import { createRef } from "react";
 import { toast } from "sonner";
-import { Button } from "../ui/button";
 import { Input } from "../ui/input";
 import { Label } from "../ui/label";
+import SubmitButton from "./submit-button";
 import { addItem } from "./todo-actions";
 
 type Props = {};
@@ -32,9 +32,7 @@ const AddItemForm = (props: Props) => {
         <Input id="text" name="text" type="text" />
       </div>
       <div className="flex flex-row justify-end">
-        <Button variant={"default"} type="submit" className="">
-          Add
-        </Button>
+        <SubmitButton />
       </div>
     </form>
   );
