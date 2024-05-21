@@ -1,19 +1,11 @@
-import { TwoColumns } from './slide-layouts.tsx'
+import { MainSlide } from './slide-layouts.tsx'
 
-<div className="text-7xl">
-# Hello 1
+# What we learned rebuilding the largest Nordic electronic retail website in Next.js 14?
+
+<div className="hidden group-[.practice]:block notes">
+This is what I will say
 </div>
-
-<div className="w-full grid grid-cols-2">
-  <div>
-    This is some content
-  </div>
-  <div>
-    This is some content
-  </div>
-</div>
-
 
 export default ({children}) => {
-  return <TwoColumns >{children}</TwoColumns>
+  return <MainSlide >{children}</MainSlide>
 }

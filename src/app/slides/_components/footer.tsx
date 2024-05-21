@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useCallback, useEffect } from "react";
 import { hasMoreSlides } from "../_slides/config";
 import { ChevronLeftIcon, ChevronRightIcon } from "./icons";
@@ -12,11 +12,13 @@ type Props = {};
 const SlidesFooter = (props: Props) => {
   const router = useRouter();
   const pathname = usePathname();
+  const searchParams = useSearchParams();
   const { forward, back } = useSlide();
   const [_, slideIdStr] = pathname.split("/slides/");
   const slideId = parseInt(slideIdStr, 10);
-  const nextUrl = `/slides/${slideId + 1}`;
-  const prevUrl = slideId > 1 ? `/slides/${slideId - 1}` : null;
+  const nextUrl = `/slides/${slideId + 1}?${searchParams.toString()}`;
+  const prevUrl =
+    slideId > 1 ? `/slides/${slideId - 1}?${searchParams.toString()}` : null;
 
   const nextSlide = useCallback(() => {
     if (hasMoreSlides(slideId)) {
