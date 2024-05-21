@@ -36,7 +36,7 @@ const SlidesTemplate = ({ children }: PropsWithChildren<Props>) => {
   return (
     <AnimatePresence>
       <motion.div
-        className="w-full h-full"
+        className="w-full h-full p-4"
         key={slideId}
         custom={direction}
         variants={variants}

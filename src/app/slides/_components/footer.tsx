@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useCallback, useEffect } from "react";
+import { hasMoreSlides } from "../_slides/config";
 import { ChevronLeftIcon, ChevronRightIcon } from "./icons";
 import { useSlide } from "./slider-provider";
 
@@ -18,8 +19,10 @@ const SlidesFooter = (props: Props) => {
   const prevUrl = slideId > 1 ? `/slides/${slideId - 1}` : null;
 
   const nextSlide = useCallback(() => {
-    forward();
-    router.push(nextUrl);
+    if (hasMoreSlides(slideId)) {
+      forward();
+      router.push(nextUrl);
+    }
   }, [nextUrl, router, forward]);
 
   const prevSlide = useCallback(() => {
@@ -51,7 +54,7 @@ const SlidesFooter = (props: Props) => {
   }, [nextUrl, prevUrl, router, nextSlide, prevSlide]);
 
   return (
-    <div className="flex flew-row justify-between text-gray-500">
+    <div className="flex flew-row justify-between text-muted-foreground">
       <div>@TomasJansson</div>
       <div className="flex flex-row flex-nowrap gap-2">
         {prevUrl && (
@@ -67,17 +70,19 @@ const SlidesFooter = (props: Props) => {
             <ChevronLeftIcon className="h-4 w-4" />
           </Link>
         )}
-        <Link
-          onClick={(e) => {
-            e.stopPropagation();
-            e.preventDefault();
-            nextSlide();
-          }}
-          href={nextUrl}
-          className="flex flex-row flex-nowrap items-center justify-center"
-        >
-          <ChevronRightIcon className="h-4 w-4" />
-        </Link>
+        {hasMoreSlides(slideId) && (
+          <Link
+            onClick={(e) => {
+              e.stopPropagation();
+              e.preventDefault();
+              nextSlide();
+            }}
+            href={nextUrl}
+            className="flex flex-row flex-nowrap items-center justify-center"
+          >
+            <ChevronRightIcon className="h-4 w-4" />
+          </Link>
+        )}
       </div>
     </div>
   );

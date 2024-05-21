@@ -1,4 +1,6 @@
-import { cn } from "@/lib/utils";
+"use client";
+
+import { Slide } from "../_slides/config";
 
 type Props = {
   params: {
@@ -7,9 +9,11 @@ type Props = {
 };
 
 const page = ({ params }: Props) => {
-  const bgColor = parseInt(params.id) % 2 === 0 ? "bg-red-500" : "bg-blue-500";
+  const slideId = parseInt(params.id, 10);
   return (
-    <div className={cn("p-4 w-full h-full", bgColor)}>page: {params.id}</div>
+    <div>
+      <Slide slideId={slideId} />
+    </div>
   );
 };
 
