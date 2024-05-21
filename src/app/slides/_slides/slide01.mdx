@@ -1,3 +1,5 @@
+import { TwoColumns } from './slide-layouts.tsx'
+
 <div className="text-7xl">
 # Hello 1
 </div>
@@ -13,5 +15,5 @@
 
 
 export default ({children}) => {
-  return <div className="flex flex-col justify-center items-center h-screen">{children}</div>
+  return <TwoColumns >{children}</TwoColumns>
 }
