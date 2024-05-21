@@ -1,5 +1,7 @@
 import createMDX from '@next/mdx';
+import { withVercelToolbar } from '@vercel/toolbar/plugins/next';
 import remarkGfm from 'remark-gfm';
+
 
 const withMDX = createMDX(
   {
@@ -24,4 +26,4 @@ const nextConfig = {
   pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
 };
 
-export default withMDX(nextConfig);
+export default withMDX(withVercelToolbar(nextConfig));
