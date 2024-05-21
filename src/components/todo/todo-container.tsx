@@ -1,4 +1,3 @@
-import React from "react";
 import AddItemForm from "./add-item-form";
 import ItemList from "./item-list";
 
