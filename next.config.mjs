@@ -26,4 +26,4 @@ const nextConfig = {
   pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
 };
 
-export default withMDX(withVercelToolbar(nextConfig));
+export default withMDX(withVercelToolbar()(nextConfig));
