@@ -1,11 +1,13 @@
 "use client";
 
+import { useFlags } from "@/components/flag-provider";
+import { JsonValue } from "@vercel/flags";
 import { AnimatePresence, motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import { PropsWithChildren } from "react";
 import { useSlide } from "../_components/slider-provider";
 
-const variants = {
+const slideVariants = {
   enter: (direction: number) => {
     return {
       x: direction > 0 ? 1000 : -1000,
@@ -26,9 +28,39 @@ const variants = {
   },
 };
 
+const fadeVariants = {
+  enter: {
+    opacity: 0,
+    transition: {
+      opacity: { duration: 1.6 },
+    },
+  },
+  center: {
+    zIndex: 1,
+    opacity: 1,
+    transition: {
+      opacity: { duration: 1.6 },
+    },
+  },
+  exit: {
+    zIndex: 0,
+    opacity: 0,
+    transition: {
+      opacity: { duration: 1.6 },
+    },
+  },
+};
+
+const getVariants = (useFadeVariants: JsonValue) => {
+  return useFadeVariants ? fadeVariants : slideVariants;
+};
+
 type Props = {};
 
 const SlidesTemplate = ({ children }: PropsWithChildren<Props>) => {
+  const flags = useFlags();
+  const useFadeVariants = flags.flags["fade-variants"];
+  const variants = getVariants(useFadeVariants);
   const pathname = usePathname();
   const { direction } = useSlide();
   const [_, slideIdStr] = pathname.split("/slides/");
@@ -45,7 +77,7 @@ const SlidesTemplate = ({ children }: PropsWithChildren<Props>) => {
         exit="exit"
         transition={{
           x: { type: "spring", stiffness: 300, damping: 30 },
-          opacity: { duration: 0.2 },
+          opacity: { duration: 0.7 },
         }}
       >
         {children}
