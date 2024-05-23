@@ -7,7 +7,7 @@ import { Wrench } from "lucide-react";
 import Link from "next/link";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useCallback, useEffect } from "react";
-import { hasMoreSlides } from "../_slides/config";
+import { getNumberOfSlides, hasMoreSlides } from "../_slides/config";
 import { ChevronLeftIcon, ChevronRightIcon } from "./icons";
 import { useSlide } from "./slider-provider";
 
@@ -15,6 +15,7 @@ type Props = {};
 
 const SlidesFooter = (props: Props) => {
   const { flags } = useFlags();
+  const x = useSlide();
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
@@ -71,6 +72,9 @@ const SlidesFooter = (props: Props) => {
   return (
     <div className="flex flew-row justify-between text-muted-foreground">
       <div>@TomasJansson</div>
+      <Link href="https://github.com/mastoj/nextndc">
+        https://github.com/mastoj/nextndc
+      </Link>
       <a
         href={toggleToolbarUrl}
         onClick={(e) => {
@@ -81,7 +85,7 @@ const SlidesFooter = (props: Props) => {
         <Wrench />
       </a>
       <div className="flex flex-row flex-nowrap gap-2">
-        {prevUrl && (
+        {prevUrl ? (
           <Link
             onClick={(e) => {
               e.stopPropagation();
@@ -93,8 +97,13 @@ const SlidesFooter = (props: Props) => {
           >
             <ChevronLeftIcon className="h-4 w-4" />
           </Link>
+        ) : (
+          <div className="h-4 w-4">&nbsp;</div>
         )}
-        {hasMoreSlides(slideId) && (
+        <span className="tabular-nums">
+          {slideId} / {getNumberOfSlides()}
+        </span>
+        {hasMoreSlides(slideId) ? (
           <Link
             onClick={(e) => {
               e.stopPropagation();
@@ -106,6 +115,8 @@ const SlidesFooter = (props: Props) => {
           >
             <ChevronRightIcon className="h-4 w-4" />
           </Link>
+        ) : (
+          <div className="h-4 w-4">&nbsp;</div>
         )}
       </div>
       {showToolbar && (
