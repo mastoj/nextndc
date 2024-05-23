@@ -32,7 +32,6 @@ export const MainSlide = ({
 }: PropsWithChildren<{
   imgUrl?: StaticImageData;
 }>) => {
-  console.log("==> imageUrl: ", imgUrl);
   return (
     <>
       {imgUrl && <BackgroundImageWithBackdrop imgData={imgUrl} />}

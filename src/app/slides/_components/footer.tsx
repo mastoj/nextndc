@@ -43,6 +43,10 @@ const SlidesFooter = (props: Props) => {
   // Effect that listens to right and left arrow keys to do a router push to the next or previous slide
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
+      // Liste for key "t" to toggle toolbar
+      if (event.key === "t") {
+        router.push(toggleToolbarUrl);
+      }
       if (event.key === "ArrowRight" || (event.key === "Enter" && nextUrl)) {
         nextSlide();
       }
