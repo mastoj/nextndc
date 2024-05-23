@@ -1,5 +1,9 @@
 "use client";
 
+import { useFlags } from "@/components/flag-provider";
+import { FlagValues } from "@vercel/flags/react";
+import { VercelToolbar } from "@vercel/toolbar/next";
+import { Wrench } from "lucide-react";
 import Link from "next/link";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useCallback, useEffect } from "react";
@@ -10,6 +14,7 @@ import { useSlide } from "./slider-provider";
 type Props = {};
 
 const SlidesFooter = (props: Props) => {
+  const { flags } = useFlags();
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
@@ -55,9 +60,26 @@ const SlidesFooter = (props: Props) => {
     };
   }, [nextUrl, prevUrl, router, nextSlide, prevSlide]);
 
+  const newSearchParams = new URLSearchParams(searchParams.toString());
+  const showToolbar = searchParams.get("toolbar") === "true";
+  if (showToolbar) newSearchParams.delete("toolbar");
+  else newSearchParams.set("toolbar", "true");
+  const toggleToolbarUrl = `${pathname}?${newSearchParams.toString()}`;
+
+  console.log("==> Show toolbar: ", showToolbar, toggleToolbarUrl);
+
   return (
     <div className="flex flew-row justify-between text-muted-foreground">
       <div>@TomasJansson</div>
+      <a
+        href={toggleToolbarUrl}
+        onClick={(e) => {
+          e.stopPropagation();
+        }}
+        className="flex flex-row flex-nowrap items-center justify-center"
+      >
+        <Wrench />
+      </a>
       <div className="flex flex-row flex-nowrap gap-2">
         {prevUrl && (
           <Link
@@ -86,6 +108,12 @@ const SlidesFooter = (props: Props) => {
           </Link>
         )}
       </div>
+      {showToolbar && (
+        <>
+          <VercelToolbar />
+          <FlagValues values={flags} />
+        </>
+      )}
     </div>
   );
 };
