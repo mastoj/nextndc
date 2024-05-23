@@ -35,7 +35,7 @@ export const MainSlide = ({
   return (
     <>
       {imgUrl && <BackgroundImageWithBackdrop imgData={imgUrl} />}
-      <div className="absolute h-screen w-screen p-4 px-12 text-5xl flex justify-center items-center text-center leading-loose bg-transparent z-10">
+      <div className="absolute h-screen w-screen p-4 px-12 flex flex-col gap-4 justify-center items-center text-center bg-transparent z-10">
         {children}
       </div>
     </>
