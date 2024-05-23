@@ -1,3 +1,4 @@
+import homepage from './images/homepage.png'
 import { MainSlide } from './slide-layouts.tsx'
 
 # What we learned rebuilding the largest Nordic electronic retail website in Next.js 14?
@@ -7,5 +8,7 @@ This is what I will say
 </div>
 
 export default ({children}) => {
-  return <MainSlide >{children}</MainSlide>
+  return <MainSlide imgUrl={homepage}>
+    {children}
+  </MainSlide>
 }
