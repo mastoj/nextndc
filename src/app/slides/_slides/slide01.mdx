@@ -1,3 +1,4 @@
+import { Notes } from '../_components/notes.tsx'
 import homepage from './images/homepage.png'
 import { MainSlide } from './slide-layouts.tsx'
 
@@ -11,9 +12,9 @@ import { MainSlide } from './slide-layouts.tsx'
   <span>Principal Software Engineer, Elkjøp Nordic</span>
 </div>
 
-<div className="hidden group-[.practice]:block notes">
-This is what I will say
-</div>
+<Notes>
+Hello everyone! I guess a lot of you in the audience, at least you from the Nordics, has used Elkjøp, elgiganten or gigantti and most likely been frustrated at some point. How has the experience been?
+</Notes>
 
 export default ({children}) => {
   return <MainSlide imgUrl={homepage}>

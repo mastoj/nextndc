@@ -1,3 +1,37 @@
-# Hello 3
+import Image from 'next/image';
+import logo from './images/elkjop.png';
+import me from './images/me.png';
+import { Column, Columns } from "./slide-layouts";
 
-This is some content!
+<div className="text-7xl text-center w-full pt-8">
+# Who is Tomas Jansson?
+</div>
+<Columns columnCount={2}>
+<Column>
+<div className="flex flex-col gap-16 mt-16 pl-8">
+  <div>
+    <div className="max-w-[40%] text-xl">
+      <Image src={logo} alt="Me" className="object-fit max-w-1/4"/>
+    </div>
+    <div className="text-2xl">
+      Principal Software Engineer, Elkjøp Nordic
+    </div>
+  </div>
+  <div className="*:flex *:flex-col *:gap-4 text-xl">
+  * I'm getting old - close to 20 years of getting paid for writing code
+  * "Full stack" - everything from infrastructure to frontend
+  * Focus on delivering value and make teams great
+  * Strong believer in continous change
+  </div>
+</div>
+</Column>
+<Column>
+<div className="max-w-[75%] mt-12 mx-auto">
+  <Image src={me} alt="Me" className="object-fit"/>
+</div>
+</Column>
+</Columns>
+
+<div className="notes">
+Before moving on a quick introduction is in order. I'm a principal software engineer at Elkjøp Nordic, which is the largest electronic retailer in the Nordics. I have previously worked as consultant for 10+ years and also some years at a startup. I realize I am getting older since I've been doing this professionally for close to 20 years now, which is fun and scary at the same time. My first paid job was Perl and from there I've been through ABAP, Java, C#, F#, golang and of course js and typesecript. The work has included that is referred to when talking about fullstack. I often don't focus too much of where in the stack I am, instead I try to look at it from the perspective of where I believe I can make a significant impact... and right now it is in rebuilding our site at Elkjøp which has been super fun so far!
+</div>

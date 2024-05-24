@@ -74,21 +74,24 @@ const SlidesFooter = (props: Props) => {
   console.log("==> Show toolbar: ", showToolbar, toggleToolbarUrl);
 
   return (
-    <div className="flex flew-row justify-between text-muted-foreground">
+    <div className="grid grid-cols-2 md:grid-cols-3  text-muted-foreground">
       <div>@TomasJansson</div>
-      <Link href="https://github.com/mastoj/nextndc">
+      <Link
+        href="https://github.com/mastoj/nextndc"
+        className="col-start-1 md:col-start-auto md:text-center"
+      >
         https://github.com/mastoj/nextndc
       </Link>
-      <a
-        href={toggleToolbarUrl}
-        onClick={(e) => {
-          e.stopPropagation();
-        }}
-        className="flex flex-row flex-nowrap items-center justify-center"
-      >
-        <Wrench />
-      </a>
-      <div className="flex flex-row flex-nowrap gap-2">
+      <div className="flex flex-row justify-end flex-nowrap gap-2">
+        <a
+          href={toggleToolbarUrl}
+          onClick={(e) => {
+            e.stopPropagation();
+          }}
+          className="flex flex-row flex-nowrap items-center justify-center"
+        >
+          <Wrench />
+        </a>
         {prevUrl ? (
           <Link
             onClick={(e) => {
@@ -104,7 +107,7 @@ const SlidesFooter = (props: Props) => {
         ) : (
           <div className="h-4 w-4">&nbsp;</div>
         )}
-        <span className="tabular-nums">
+        <span className="tabular-nums text-nowrap">
           {slideId} / {getNumberOfSlides()}
         </span>
         {hasMoreSlides(slideId) ? (

@@ -9,6 +9,7 @@ import SliderProvider from "./_components/slider-provider";
 const SlidesLayout = async ({ children }: PropsWithChildren) => {
   const flags = await getFlags(cookies().get("vercel-flag-overrides")?.value);
   const useLightTheme = flags["light-theme"];
+  const showNotes = flags["show-notes"];
   return (
     <FlagProvider flags={flags}>
       <SliderProvider>

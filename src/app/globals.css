@@ -75,6 +75,6 @@
   }
 
   .notes {
-    @apply bg-card text-card-foreground absolute text-sm w-1/5 right-0 top-0 p-4 bg-transparent/25 text-white;
+    @apply bg-card text-card-foreground absolute text-sm w-full md:w-1/2 lg:w-1/4 right-0 top-0 p-4 bg-transparent/25 text-white text-left;
   }
 }

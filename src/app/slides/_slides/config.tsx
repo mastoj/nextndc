@@ -1,5 +1,5 @@
 import Slide01 from "./slide01.mdx";
-import Slide02 from "./slide02.mdx";
+import { Slide02 } from "./slide02.tsx";
 import Slide03 from "./slide03.mdx";
 
 export const slideMap: Record<number, React.ReactNode> = {
