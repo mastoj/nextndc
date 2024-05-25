@@ -15,7 +15,7 @@ const SlidesLayout = async ({ children }: PropsWithChildren) => {
       <SliderProvider>
         <div
           className={cn(
-            "h-screen w-screen overflow-hidden flex flex-col bg-background text-foreground",
+            "h-screen w-screen overflow-auto md:overflow-hidden flex flex-col bg-background text-foreground",
             useLightTheme ? "light" : "dark"
           )}
         >

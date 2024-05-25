@@ -9,12 +9,14 @@ export const Column = ({
   title?: string;
 }>) => {
   return (
-    <div className="h-screen grid grid-rows-[auto_1fr] gap-8 py-12">
+    <section className="h-screen grid grid-rows-[auto_1fr] gap-8 py-12">
       {title && (
-        <div className="flex flex-row justify-center text-5xl">{title}</div>
+        <h1 className="flex flex-row justify-center text-5xl text-center w-full pt-8">
+          {title}
+        </h1>
       )}
       <div className="gap-8 justify-center">{children}</div>
-    </div>
+    </section>
   );
 };
 
@@ -71,9 +73,9 @@ const BackgroundImageWithBackdrop = ({
       alt="background"
       className="w-full h-full object-cover"
     />
-    <div className="absolute top-0 left-0 w-screen h-screen bg-black/80">
+    {/* <div className="absolute top-0 left-0 w-screen h-screen bg-black/80">
       &nbsp;
-    </div>
+    </div> */}
   </div>
 );
 
@@ -86,7 +88,7 @@ export const MainSlide = ({
   return (
     <>
       {imgUrl && <BackgroundImageWithBackdrop imgData={imgUrl} />}
-      <div className="absolute h-screen w-screen top-0 left-0 p-4 px-12 flex flex-col gap-4 justify-center items-center text-center bg-transparent z-10">
+      <div className="absolute h-screen w-screen top-0 left-0 p-4 px-12 flex flex-col gap-4 justify-center items-center text-center bg-transparent z-10 overlay">
         {children}
       </div>
     </>
