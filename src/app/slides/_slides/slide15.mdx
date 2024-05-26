@@ -1,0 +1,14 @@
+import { Notes } from '../_components/notes.tsx'
+import { MainSlide } from './slide-layouts.tsx'
+
+# Feature toggling
+
+<Notes>
+When talking about middleware I think it is worth mentioning how we are working with feature toggles and routing. Since we do want to render as much as possible on the server in a static fashion we can't rely on cookies, headers or anything from a request in the route part of the application, but we can use those in middleware. So what we do in the middleware is looking at things like, market, flags and user role and create a context based on that which we base64 encode and this is our first segment of the path. This way we can have completely static rendered application for different scenarios. And it also makes it possible for us to turn off caching if we are previewing from cms. Feature toggle overrides are also stored in this context, so from the vercel toolbar we can set toggles on a per user session (if you have access) and this makes it extremely convenient for us to test out things in production. It also makes it much safer for us developer to push things out to production behind a feature flag and then we can get feedback before turning the flag on for everyone. 
+</Notes>
+
+export default ({children}) => {
+  return <MainSlide>
+    {children}
+  </MainSlide>
+}

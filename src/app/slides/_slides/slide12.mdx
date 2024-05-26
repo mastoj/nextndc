@@ -1,0 +1,14 @@
+import { Notes } from '../_components/notes.tsx'
+import { MainSlide } from './slide-layouts.tsx'
+
+# What did we learn?
+
+<Notes>
+Next.js is a opinionated way of writing applications, you can't accept those opinions you are better off with using something else. Of course there are things I might not like 100%, but I understand why it is like so and accept it since I consider the upside of not having to reinvent everything myself much bigger than figuring out all the things that I get from nextjs by myself. I want to focus as much as possible on delivering vavlue to our customers and if I can "buy" myself some slack by using something existing I am 100% fine with that.
+</Notes>
+
+export default ({children}) => {
+  return <MainSlide>
+    {children}
+  </MainSlide>
+}

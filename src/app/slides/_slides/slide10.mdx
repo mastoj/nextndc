@@ -1,0 +1,14 @@
+import { Notes } from '../_components/notes.tsx'
+import { MainSlide } from './slide-layouts.tsx'
+
+# Spectrum of applications
+
+<Notes>
+Let's change pace and focus on the technical part. The way I pictuer web application is on some kind of spectrum ranging from fully static pages to fully dynamic applications. To make a half decent decision it might be good to know where you are on this spectrum. On one end we have static blogs that can be just plain html and on the other we could have things like real time applications. An ecommerce site is really more towards the static end of the spectrum overall with some dynamic parts. The previous site was build using angular which is really targetting dynamic applications you will always fight the framework. I'm not sure I would use angular in that end either but that is a completely different discussion... Nextjs on the other hand is first quite broad, but you can quite easily use it to generate static content where needed and then sprinkle dynamic content on top.
+</Notes>
+
+export default ({children}) => {
+  return <MainSlide>
+    {children}
+  </MainSlide>
+}

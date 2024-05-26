@@ -1,0 +1,15 @@
+import { Notes } from '../_components/notes.tsx'
+import { MainSlide } from './slide-layouts.tsx'
+
+# To the edge and back
+
+<Notes>
+When started using nextjs and vercel there were quite a significant push to run things more on edge, and we went with it. Most of the time it worked really well, but we did see some unexpected latencies from time to time which was quite annoying, but they all made sense when we started to think about it. When running things on the edge basically all our requests to the underlying API needs to travel further and that could cause unexpected latencies. Moving the computation to serverless which will run closer to the underlying APIs will make things more reliable when it comes to latencies. Does this mean you should never user edge? Definitely not. If you have the data co-located with your edge nodes you can definitely run on edge, or if you maybe have only a few API calls. I can't tell you what to do, but be sure to test your assumptions.
+
+</Notes>
+
+export default ({children}) => {
+  return <MainSlide>
+    {children}
+  </MainSlide>
+}

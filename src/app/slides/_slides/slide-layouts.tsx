@@ -88,7 +88,12 @@ export const MainSlide = ({
   return (
     <>
       {imgUrl && <BackgroundImageWithBackdrop imgData={imgUrl} />}
-      <div className="absolute h-screen w-screen top-0 left-0 p-4 px-12 flex flex-col gap-4 justify-center items-center text-center bg-transparent z-10 overlay">
+      <div
+        className={cn(
+          "absolute h-screen w-screen top-0 left-0 p-4 px-12 flex flex-col gap-4 justify-center items-center text-center bg-transparent z-10",
+          imgUrl && "overlay"
+        )}
+      >
         {children}
       </div>
     </>
