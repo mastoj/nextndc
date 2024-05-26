@@ -74,7 +74,7 @@ const SlidesFooter = (props: Props) => {
   console.log("==> Show toolbar: ", showToolbar, toggleToolbarUrl);
 
   return (
-    <div className="grid grid-cols-2 md:grid-cols-3 text-muted-foreground text-xs md:text-base">
+    <div className="grid grid-cols-2 md:grid-cols-3 text-muted-foreground text-xs md:text-base z-50">
       <div>@TomasJansson</div>
       <Link
         href="https://github.com/mastoj/nextndc"

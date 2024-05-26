@@ -1,11 +1,13 @@
 import Slide01 from "./slide01.mdx";
 import { Slide02 } from "./slide02";
 import Slide03 from "./slide03.mdx";
+import Slide04 from "./slide04.mdx";
 
 export const slideMap: Record<number, React.ReactNode> = {
   1: <Slide01 />,
   2: <Slide02 />,
   3: <Slide03 />,
+  4: <Slide04 />,
 };
 
 export const getNumberOfSlides = () => Object.keys(slideMap).length;
