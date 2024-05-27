@@ -1,7 +1,20 @@
-import { Notes } from '../_components/notes.tsx'
-import { MainSlide } from './slide-layouts.tsx'
+import { CircleDollarSign } from 'lucide-react';
+import Image from "next/image";
+import { Notes } from '../_components/notes.tsx';
+import { Column, MainSlide, TwoColumns } from '../_components/slide-layouts.tsx';
 
-# Do the math
+<TwoColumns>
+  <Column className="flex justify-center items-center">
+  
+    # Do the math
+  
+  </Column>
+
+  <Column className="flex flex-row justify-center items-center">
+    <CircleDollarSign className="w-72 h-72" />
+  </Column>
+</TwoColumns>
+
 
 <Notes>
 The main reason I think "the business" is driving most change initiatives is because they are focusing on the numbers. They make esimates on how revenue might change and also how we can lower costs. We need to speak the same language to be heard, so do the math around how cost might change or potential revenue. In our case we focused mainly on the cost.

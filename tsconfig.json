@@ -32,7 +32,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "src/app/slides/_slides/slide03.mdx"
+    "src/app/slides/_slides/me.mdx"
   ],
   "exclude": [
     "node_modules"

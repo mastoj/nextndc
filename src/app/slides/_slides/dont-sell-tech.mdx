@@ -1,0 +1,23 @@
+import Image from "next/image";
+import { Notes } from '../_components/notes.tsx';
+import { Column, TwoColumns } from '../_components/slide-layouts.tsx';
+import SellTheProblem from './images/sell-the-problem.webp';
+
+<TwoColumns>
+  <Column className="flex justify-center items-center">
+  
+    # Don't sell the tech, sell the problem
+  
+  </Column>
+
+  <Column className="flex justify-center items-center">
+    <Image
+      src={SellTheProblem}
+      alt="Don't sell the tech, sell the problem"
+    />
+  </Column>
+</TwoColumns>
+
+<Notes>
+First point is what I call "sell the problem". Often as developer we tend to focus on the tech much more than the problem we are going to solve. Focusing on the problem and why it is a problem is definitely more effective to get an approval from management. 
+</Notes>

@@ -1,48 +1,63 @@
 import Image from "next/image";
 import { Notes } from "../_components/notes";
+import { Column, TwoColumns } from "../_components/slide-layouts";
 import Comment1 from "./images/bad_comment1.png";
 import Comment2 from "./images/bad_comment2.png";
 import MissingPrices from "./images/missing_prices.png";
 import SpeedInsights from "./images/speed_insights.png";
-import { TwoColumns } from "./slide-layouts";
 
-export const Slide02 = () => {
+const FromColumn = () => {
+  return (
+    <Column title="From this">
+      <div className="relative grid grid-rows-[40%_1fr_1fr] h-3/4 min-h-0 overflow-hidden">
+        <div className="mx-auto flex flex-row justify-center min-h-0">
+          <Image
+            src={MissingPrices}
+            alt="Missing price sample"
+            className="object-contain min-h-0"
+          />
+        </div>
+        <div className="flex flex-row justify-center mx-auto">
+          <Image
+            src={Comment1}
+            alt="Bad comment example 1"
+            className="object-contain"
+          />
+        </div>
+        <div className="flex flex-row justify-center mx-auto">
+          <Image
+            src={Comment2}
+            alt="Bad comment example 2"
+            className="object-contain"
+          />
+        </div>
+      </div>
+    </Column>
+  );
+};
+
+const ToColumn = () => {
+  return (
+    <Column title="To this">
+      <div className="mx-auto flex flex-row justify-center">
+        <Image src={SpeedInsights} alt="Current speed insights" />
+      </div>
+    </Column>
+  );
+};
+
+{
+  /* <Column title={titleColumn1}>{column1}</Column>
+<Column title={titleColumn2}>{column2}</Column> */
+}
+
+export const Background = () => {
   return (
     <>
-      <TwoColumns
-        titleColumn1="From this"
-        titleColumn2="To this"
-        column1={
-          <div className="relative grid grid-rows-[40%_1fr_1fr] h-3/4 min-h-0 overflow-hidden">
-            <div className="mx-auto flex flex-row justify-center min-h-0">
-              <Image
-                src={MissingPrices}
-                alt="Missing price sample"
-                className="object-contain min-h-0"
-              />
-            </div>
-            <div className="flex flex-row justify-center mx-auto">
-              <Image
-                src={Comment1}
-                alt="Bad comment example 1"
-                className="object-contain"
-              />
-            </div>
-            <div className="flex flex-row justify-center mx-auto">
-              <Image
-                src={Comment2}
-                alt="Bad comment example 2"
-                className="object-contain"
-              />
-            </div>
-          </div>
-        }
-        column2={
-          <div className="mx-auto flex flex-row justify-center">
-            <Image src={SpeedInsights} alt="Current speed insights" />
-          </div>
-        }
-      />
+      <TwoColumns>
+        <FromColumn />
+        <ToColumn />
+      </TwoColumns>
       <Notes>
         <p>
           If you have used the site a lot you might have seen something like the

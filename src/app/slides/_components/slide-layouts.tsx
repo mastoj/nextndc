@@ -4,12 +4,19 @@ import { PropsWithChildren } from "react";
 
 export const Column = ({
   title,
+  className,
   children,
 }: PropsWithChildren<{
   title?: string;
+  className?: string;
 }>) => {
   return (
-    <section className="h-screen grid grid-rows-[auto_1fr] gap-8 py-12">
+    <section
+      className={cn(
+        "h-screen grid grid-rows-[auto_1fr] gap-8 py-12",
+        className
+      )}
+    >
       {title && (
         <h1 className="flex flex-row justify-center text-5xl text-center w-full pt-8">
           {title}
@@ -39,21 +46,10 @@ export const Columns = ({
   );
 };
 
-export const TwoColumns = ({
-  titleColumn1,
-  titleColumn2,
-  column1,
-  column2,
-}: {
-  titleColumn1?: string;
-  titleColumn2?: string;
-  column1: React.ReactNode;
-  column2: React.ReactNode;
-}) => {
+export const TwoColumns = ({ children }: PropsWithChildren) => {
   return (
-    <div className="grid grid-cols-2 gap-8 h-screen">
-      <Column title={titleColumn1}>{column1}</Column>
-      <Column title={titleColumn2}>{column2}</Column>
+    <div className="grid grid-cols-2 gap-8 h-screen w-full px-8">
+      {children}
     </div>
   );
 };

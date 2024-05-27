@@ -47,6 +47,9 @@ const SlidesFooter = (props: Props) => {
       if (event.key === "t") {
         router.push(toggleToolbarUrl);
       }
+      if (event.key === "e") {
+        router.push(toggleToolbarUrl);
+      }
       if (event.key === "ArrowRight" || (event.key === "Enter" && nextUrl)) {
         nextSlide();
       }

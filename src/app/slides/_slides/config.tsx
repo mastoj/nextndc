@@ -1,39 +1,39 @@
-import Slide01 from "./slide01.mdx";
-import { Slide02 } from "./slide02";
-import Slide03 from "./slide03.mdx";
-import Slide04 from "./slide04.mdx";
-import Slide05 from "./slide05.mdx";
-import Slide06 from "./slide06.mdx";
-import Slide07 from "./slide07.mdx";
-import Slide08 from "./slide08.mdx";
-import Slide09 from "./slide09.mdx";
-import Slide10 from "./slide10.mdx";
-import Slide11 from "./slide11.mdx";
-import Slide12 from "./slide12.mdx";
-import Slide13 from "./slide13.mdx";
-import Slide14 from "./slide14.mdx";
-import Slide15 from "./slide15.mdx";
-import Slide16 from "./slide16.mdx";
-import Slide17 from "./slide17.mdx";
+import { Background } from "../_slides/background";
+import DoTheMath from "./do-the-math.mdx";
+import DontSellTech from "./dont-sell-tech.mdx";
+import EdgeAndBack from "./edge-and-back.mdx";
+import ErrorHandling from "./error-handling.mdx";
+import FeatureToggling from "./feature-toggling.mdx";
+import HighLevel from "./high-level.mdx";
+import HowDoYouStart from "./how-do-you-start.mdx";
+import Internationalization from "./internationalization.mdx";
+import Intro from "./intro.mdx";
+import Me from "./me.mdx";
+import PairUp from "./pair-up.mdx";
+import RSC from "./rsc.mdx";
+import SpectrumOfApplications from "./spectrum-of-applications.mdx";
+import TellAndShow from "./tell-and-show.mdx";
+import TimingIsBad from "./timing-is-bad.mdx";
+import WhatDidWeLearn from "./what-did-we-learn.mdx";
 
 export const slideMap: Record<number, React.ReactNode> = {
-  1: <Slide01 />,
-  2: <Slide02 />,
-  3: <Slide03 />,
-  4: <Slide04 />,
-  5: <Slide05 />,
-  6: <Slide06 />,
-  7: <Slide07 />,
-  8: <Slide08 />,
-  9: <Slide09 />,
-  10: <Slide10 />,
-  11: <Slide11 />,
-  12: <Slide12 />,
-  13: <Slide13 />,
-  14: <Slide14 />,
-  15: <Slide15 />,
-  16: <Slide16 />,
-  17: <Slide17 />,
+  1: <Intro />,
+  2: <Background />,
+  3: <Me />,
+  4: <HowDoYouStart />,
+  5: <DontSellTech />,
+  6: <DoTheMath />,
+  7: <PairUp />,
+  8: <TellAndShow />,
+  9: <TimingIsBad />,
+  10: <SpectrumOfApplications />,
+  11: <HighLevel />,
+  12: <WhatDidWeLearn />,
+  13: <RSC />,
+  14: <Internationalization />,
+  15: <FeatureToggling />,
+  16: <ErrorHandling />,
+  17: <EdgeAndBack />,
 };
 
 export const getNumberOfSlides = () => Object.keys(slideMap).length;
