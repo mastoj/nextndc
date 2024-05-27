@@ -1,14 +1,21 @@
-import { Notes } from '../_components/notes.tsx'
-import { MainSlide } from '../_components/slide-layouts.tsx'
+import Image from 'next/image';
+import { Notes } from '../_components/notes.tsx';
+import { Column, MainSlide, TwoColumns } from '../_components/slide-layouts.tsx';
+import RSC from './images/rsc.png';
 
-# React server components (RSC)
+<TwoColumns>
+  <Column className="flex justify-center items-center">
+  
+    # React server components (RSC)
+
+  </Column>
+
+  <Column className="flex flex-row justify-center items-center">
+    <Image src={RSC} alt="RSC illustration"/>
+  </Column>
+</TwoColumns>
+
 
 <Notes>
 React server components is probably one of the largest changes nextjs has pushed into the react ecosystem with nextjs 13. As I see it this is not something 100% new and more how it has been on other runtimes for a long time, but we have been focusing too much on creating SPAs so we have forgot about it. Doing the initial rendering on the server is how I think it should be, and then you just sprinkle some client side magic dust where you need it. This leads to faster applications and less javascript on the client which I think is a good thing. It also simplifies a lot when it comes to application infrastructure since you often can get rid of the whole BFF in a lot of scenarios, instead you can just get the data you need on the server and serve the finished HTML.
 </Notes>
-
-export default ({children}) => {
-  return <MainSlide>
-    {children}
-  </MainSlide>
-}
