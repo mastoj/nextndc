@@ -26,6 +26,9 @@ const SlidesFooter = (props: Props) => {
   const prevUrl =
     slideId > 1 ? `/slides/${slideId - 1}?${searchParams.toString()}` : null;
 
+  const firstUrl = `/slides/1?${searchParams.toString()}`;
+  const lastUrl = `/slides/${getNumberOfSlides()}?${searchParams.toString()}`;
+
   const nextSlide = useCallback(() => {
     if (hasMoreSlides(slideId)) {
       forward();
@@ -48,7 +51,12 @@ const SlidesFooter = (props: Props) => {
         router.push(toggleToolbarUrl);
       }
       if (event.key === "e") {
-        router.push(toggleToolbarUrl);
+        forward();
+        router.push(lastUrl);
+      }
+      if (event.key === "s") {
+        back();
+        router.push(firstUrl);
       }
       if (event.key === "ArrowRight" || (event.key === "Enter" && nextUrl)) {
         nextSlide();
