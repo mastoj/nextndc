@@ -15,7 +15,6 @@ type Props = {};
 
 const SlidesFooter = (props: Props) => {
   const { flags } = useFlags();
-  const x = useSlide();
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
@@ -31,15 +30,13 @@ const SlidesFooter = (props: Props) => {
 
   const nextSlide = useCallback(() => {
     if (hasMoreSlides(slideId)) {
-      forward();
-      router.push(nextUrl);
+      forward() && router.push(nextUrl);
     }
   }, [nextUrl, router, forward]);
 
   const prevSlide = useCallback(() => {
     if (prevUrl != null) {
-      back();
-      router.push(prevUrl);
+      back() && router.push(prevUrl);
     }
   }, [prevUrl, router, back]);
 

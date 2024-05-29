@@ -1,7 +1,10 @@
 import Image from 'next/image';
+import { ImageSwitch } from '../_components/image-switch.tsx';
 import { Notes } from '../_components/notes.tsx';
 import { Column, MainSlide, TwoColumns } from '../_components/slide-layouts.tsx';
-import RSC from './images/rsc.png';
+import RSC1 from './images/rsc1.png';
+import RSC2 from './images/rsc2.png';
+import RSC3 from './images/rsc3.png';
 
 <TwoColumns>
   <Column className="flex justify-center items-center">
@@ -11,7 +14,11 @@ import RSC from './images/rsc.png';
   </Column>
 
   <Column className="flex flex-row justify-center items-center">
-    <Image src={RSC} alt="RSC illustration"/>
+    <ImageSwitch images={[
+      (<Image src={RSC1} alt="RSC illustration"/>),
+      (<Image src={RSC2} alt="RSC illustration"/>),
+      (<Image src={RSC3} alt="RSC illustration"/>)
+    ]} />
   </Column>
 </TwoColumns>
 

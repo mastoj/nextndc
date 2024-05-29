@@ -3,22 +3,45 @@ import React, { PropsWithChildren } from "react";
 
 type SlideContext = {
   direction: number;
-  forward: () => void;
-  back: () => void;
+  forward: () => boolean;
+  back: () => boolean;
+  pauseProgress: () => void;
+  resumeProgress: () => void;
 };
 
 const SlideContext = React.createContext<SlideContext>({
   direction: 0,
-  forward: () => {},
-  back: () => {},
+  forward: () => false,
+  back: () => false,
+  pauseProgress: () => {},
+  resumeProgress: () => {},
 });
 
 const SliderProvider = (props: PropsWithChildren) => {
   const [direction, setDirection] = React.useState(0);
-  const forward = () => setDirection(1);
-  const back = () => setDirection(-1);
+  const [paused, setPaused] = React.useState(false);
+  const pauseProgress = () => setPaused(true);
+  const resumeProgress = () => setPaused(false);
+  const forward = () => {
+    if (paused) {
+      window.dispatchEvent(new Event("forward"));
+      return false;
+    }
+    setDirection(1);
+    return true;
+  };
+  const back = () => {
+    if (paused) {
+      window.dispatchEvent(new Event("back"));
+      return false;
+    }
+    setDirection(-1);
+    return true;
+  };
   return (
-    <SlideContext.Provider value={{ direction, forward, back }}>
+    <SlideContext.Provider
+      value={{ direction, forward, back, pauseProgress, resumeProgress }}
+    >
       {props.children}
     </SlideContext.Provider>
   );

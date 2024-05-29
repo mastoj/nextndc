@@ -13,7 +13,7 @@ export const Column = ({
   return (
     <section
       className={cn(
-        "h-screen grid grid-rows-[auto_1fr] gap-8 py-12",
+        "h-screen grid grid-rows-[auto_1fr] gap-8 py-12 overflow-hidden",
         className
       )}
     >
