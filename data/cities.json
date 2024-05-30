@@ -1,0 +1,22 @@
+[
+  { "name": "Berlin", "coordinates": [13.405, 52.52] },
+  { "name": "Madrid", "coordinates": [-3.7038, 40.4168] },
+  { "name": "Paris", "coordinates": [2.3522, 48.8566] },
+  { "name": "Rome", "coordinates": [12.4964, 41.9028] },
+  { "name": "London", "coordinates": [-0.1276, 51.5072] },
+  { "name": "Athens", "coordinates": [23.7275, 37.9838] },
+  { "name": "Vienna", "coordinates": [16.3738, 48.2082] },
+  { "name": "Warsaw", "coordinates": [21.0122, 52.2297] },
+  { "name": "Lisbon", "coordinates": [-9.1393, 38.7223] },
+  { "name": "Oslo", "coordinates": [10.7522, 59.9139] },
+  { "name": "Moscow", "coordinates": [37.6176, 55.7558] },
+  { "name": "Stockholm", "coordinates": [18.0686, 59.3293] },
+  { "name": "Helsinki", "coordinates": [24.9384, 60.1695] },
+  { "name": "Copenhagen", "coordinates": [12.5683, 55.6761] },
+  { "name": "Amsterdam", "coordinates": [4.897975, 52.37403] },
+  { "name": "Brussels", "coordinates": [4.3517, 50.8503] },
+  { "name": "Dublin", "coordinates": [-6.2603, 53.3498] },
+  { "name": "Budapest", "coordinates": [19.0402, 47.4979] },
+  { "name": "Prague", "coordinates": [14.4378, 50.0755] },
+  { "name": "Zurich", "coordinates": [8.5417, 47.3769] }
+]
