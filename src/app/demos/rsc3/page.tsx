@@ -1,3 +1,4 @@
+import { RscDemoLinks } from "@/components/demo/rsc-demo-links";
 import { PostButton } from "../_components/post-button";
 import { PostServerWithChildren } from "../_components/post-server-with-children";
 
@@ -10,11 +11,14 @@ const getRandomData = async () => {
 
 const ServerPage = async (props: Props) => {
   const post = await getRandomData();
-  console.log("ServerPage", post);
+  console.log("ServerPage");
   return (
-    <PostServerWithChildren post={post}>
-      <PostButton />
-    </PostServerWithChildren>
+    <>
+      <PostServerWithChildren post={post}>
+        <PostButton />
+      </PostServerWithChildren>
+      <RscDemoLinks />
+    </>
   );
 };
 

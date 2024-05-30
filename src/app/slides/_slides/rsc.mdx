@@ -1,4 +1,6 @@
+import { RscDemoLinks } from "@/components/demo/rsc-demo-links";
 import Image from 'next/image';
+import Link from 'next/link';
 import { ImageSwitch } from '../_components/image-switch.tsx';
 import { Notes } from '../_components/notes.tsx';
 import { Column, MainSlide, TwoColumns } from '../_components/slide-layouts.tsx';
@@ -7,10 +9,10 @@ import RSC2 from './images/rsc2.png';
 import RSC3 from './images/rsc3.png';
 
 <TwoColumns>
-  <Column className="flex justify-center items-center">
+  <Column className="flex flex-col justify-center items-center gap-4">
   
     # React server components (RSC)
-
+    <RscDemoLinks />
   </Column>
 
   <Column className="flex flex-row justify-center items-center">
