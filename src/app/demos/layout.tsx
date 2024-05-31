@@ -2,8 +2,10 @@ import { PropsWithChildren } from "react";
 
 const DemoLayout = ({ children }: PropsWithChildren) => {
   return (
-    <div className="container bg-primary text-primary-foreground h-screen">
-      {children}
+    <div className=" h-screen w-screen bg-primary text-primary-foreground">
+      <div className="container flex flex-col h-full justify-center max-w-screen-md">
+        {children}
+      </div>
     </div>
   );
 };
