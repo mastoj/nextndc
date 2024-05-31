@@ -21,7 +21,7 @@ const SlidesLayout = async ({ children }: PropsWithChildren) => {
         >
           <div className="flex-1">{children}</div>
         </div>
-        <div className="absolute bottom-0 w-screen p-4 z-10">
+        <div className="absolute bottom-0 w-screen z-10">
           <SlidesFooter />
         </div>
       </SliderProvider>
