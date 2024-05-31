@@ -1,0 +1,19 @@
+import Image from 'next/image'
+import { Notes } from '../_components/notes.tsx'
+import { Column, MainSlide, TwoColumns } from '../_components/slide-layouts.tsx'
+import caching from './images/caching.webp'
+
+<TwoColumns>
+  <Column className="flex flex-col justify-center items-center gap-4">
+  
+    # Caching
+
+  </Column>
+
+  <Column className="flex justify-center items-center">
+    <Image key={caching.src} src={caching} />
+  </Column>
+</TwoColumns>
+
+<Notes>
+</Notes>

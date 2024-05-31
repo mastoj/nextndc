@@ -36,19 +36,23 @@
                 <mxCell id="29" value="Server" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#F0F0F0;" parent="1" vertex="1">
                     <mxGeometry x="270" y="230" width="90" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="30" style="edgeStyle=none;html=1;entryX=0.75;entryY=0;entryDx=0;entryDy=0;fontColor=#F0F0F0;strokeColor=#FFFFFF;" parent="1" source="32" target="33" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
+                <mxCell id="30" style="edgeStyle=none;html=1;entryX=0.75;entryY=0;entryDx=0;entryDy=0;fontColor=#F0F0F0;strokeColor=#FFFFFF;" parent="1" source="32" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="467.5" y="230" as="targetPoint"/>
+                    </mxGeometry>
                 </mxCell>
-                <mxCell id="31" style="edgeStyle=none;html=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;fontColor=#F0F0F0;strokeColor=#FFFFFF;" parent="1" source="32" target="34" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
+                <mxCell id="31" style="edgeStyle=none;html=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;fontColor=#F0F0F0;strokeColor=#FFFFFF;" parent="1" source="32" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="552.5" y="230" as="targetPoint"/>
+                    </mxGeometry>
                 </mxCell>
                 <mxCell id="32" value="Client" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#F0F0F0;fillColor=#33FF99;fontColor=#000000;" parent="1" vertex="1">
                     <mxGeometry x="460" y="130" width="90" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="33" value="Client" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#F0F0F0;fillColor=#3B83FF;fontColor=#000000;" parent="1" vertex="1">
+                <mxCell id="34" value="Server" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#F0F0F0;" vertex="1" parent="1">
                     <mxGeometry x="400" y="230" width="90" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="34" value="Client" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#F0F0F0;fillColor=#3B83FF;fontColor=#000000;" parent="1" vertex="1">
+                <mxCell id="35" value="Server" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#F0F0F0;" vertex="1" parent="1">
                     <mxGeometry x="530" y="230" width="90" height="60" as="geometry"/>
                 </mxCell>
             </root>

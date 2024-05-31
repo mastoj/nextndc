@@ -1,11 +1,12 @@
 import Image from "next/image";
+import { ImageSwitch } from "../_components/image-switch";
 import { Notes } from "../_components/notes";
 import { Column, TwoColumns } from "../_components/slide-layouts";
 import Comment1 from "./images/bad_comment1.png";
 import Comment2 from "./images/bad_comment2.png";
 import MissingPrices from "./images/missing_prices.png";
+import PageSpeed from "./images/pagespeed.png";
 import SpeedInsights from "./images/speed_insights.png";
-
 const FromColumn = () => {
   return (
     <Column title="From this">
@@ -40,7 +41,20 @@ const ToColumn = () => {
   return (
     <Column title="To this">
       <div className="mx-auto flex flex-row justify-center">
-        <Image src={SpeedInsights} alt="Current speed insights" />
+        <ImageSwitch
+          images={[
+            <Image
+              key={SpeedInsights.src}
+              src={SpeedInsights}
+              alt="Current speed insights"
+            />,
+            <Image
+              key={PageSpeed.src}
+              src={PageSpeed}
+              alt="Current page speed"
+            />,
+          ]}
+        />
       </div>
     </Column>
   );
