@@ -2,7 +2,6 @@ import createMDX from '@next/mdx';
 import { withVercelToolbar } from '@vercel/toolbar/plugins/next';
 import remarkGfm from 'remark-gfm';
 
-
 const withMDX = createMDX(
   {
     options: {
@@ -14,6 +13,9 @@ const withMDX = createMDX(
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  images: {
+    domains: ['cdn2.thecatapi.com'],
+  },
   async redirects() {
     return [
       {

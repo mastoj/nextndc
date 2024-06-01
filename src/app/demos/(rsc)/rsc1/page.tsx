@@ -1,6 +1,5 @@
 import { RscDemoLinks } from "@/components/demo/rsc-demo-links";
-import { PostButton } from "../_components/post-button";
-import { PostServerWithChildren } from "../_components/post-server-with-children";
+import { Post } from "../../_components/post";
 
 type Props = {};
 
@@ -14,9 +13,7 @@ const ServerPage = async (props: Props) => {
   console.log("ServerPage");
   return (
     <>
-      <PostServerWithChildren post={post}>
-        <PostButton />
-      </PostServerWithChildren>
+      <Post post={post} />
       <RscDemoLinks />
     </>
   );
