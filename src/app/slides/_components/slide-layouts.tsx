@@ -23,7 +23,7 @@ export const Column = ({
           {title}
         </h1>
       )}
-      <div className="gap-8 justify-center">{children}</div>
+      <div className="h-full gap-8 justify-center">{children}</div>
     </section>
   );
 };
