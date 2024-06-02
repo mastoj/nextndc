@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import { Notes } from '../_components/notes.tsx'
 import { Column, MainSlide, TwoColumns } from '../_components/slide-layouts.tsx'
 import caching from './images/caching.webp'
@@ -8,6 +9,11 @@ import caching from './images/caching.webp'
   
     # Caching
 
+    <div className="flex flex-row gap-2 mt-8 w-full justify-center">
+      <Link onClick={(e) => e.stopPropagation()} href="/demo/cache/1">
+        Cache demo
+      </Link>
+    </div>
   </Column>
 
   <Column className="flex justify-center items-center">
@@ -16,4 +22,15 @@ import caching from './images/caching.webp'
 </TwoColumns>
 
 <Notes>
+Caching is a lot of fun, isn't it? In next.js 13 I think next.js was shipped with a fetch method that sort of changed the default behavior of what you would expect from a fetch method. On the server everything was cached as default. It was definitely with good intentions but it definitely makes it slightly confusing from time to time when things are not updated as you would expect. In version 15 they will change the default behavior to not cache by default, which I think is a good thing... but if you are on an earlier version you should be aware. 
+
+Caching in next.js comes in two flavours, page caching and data caching. Page caching is the whole page and data cache is when you cache the data you have. This could be with fetch, which has cache behavior built-in, or you could use the unstable cache method to cache data that is not using fetch. The data cache and page cache is somehow connected, so if the data cache is revalidated also the page for that page will be revalidated. Revalidation is next.js words of saying that some cache has expired and it needs new data. It is also important to know if you are on a dynamic route or static route, since the cache behavior differs slightly. On a static route all the cached fetched calls will be fetched again, but on a dynamic route only the data that needs new data will be fetched again. The time for revalidation is calculated as the lowest revalidation time of all the "connected" data.
+
+For the data cache you can configure tags that you can use to invalidate the cache, and you can have multiple tags for any entry. In our case this is very useful since we can have a tag that indicate a specific item all countries, a whole country, or an item in one country only and just revalidate the data that is needed.
+
+When it comes to data caching you can also use the cache method to cache data, but this is not connected to the page cache. This is a way to cache data that is not connected to a page, and you can use this to cache data that is used in multiple places. 
+
+When it comes to page caching you can also use the unstable_revalidate method to set how often you want to revalidate the page. This is a good way to make sure that you have fresh data on the page, but be aware that this will also make the page slower since it needs to revalidate the data.
+
+All in all I'm quite happy with caching in next.js, the only thing I do miss is some visibility around the cache. I want it to be easier to see what is in the cache, how long items are in the cache. Without that visibility it is hard to know how effective the cache is. 
 </Notes>

@@ -1,6 +1,7 @@
 import { Column, TwoColumns } from "@/app/slides/_components/slide-layouts";
 import { unstable_cache as cache } from "next/cache";
 import Image from "next/image";
+import CacheLinks from "./_components/cache-links";
 import RevalidateButton from "./_components/revalidate-button";
 
 type Props = {
@@ -75,6 +76,7 @@ const CachePage = async ({ params: { id } }: Props) => {
       <Column>
         <span>Page time: {new Date().toLocaleTimeString()}</span>
         <RevalidateButton tag="cats">Revalidate all</RevalidateButton>
+        <CacheLinks />
       </Column>
       <Column>
         <div className="grid grid-rows-2 w-full gap-2 h-full">
