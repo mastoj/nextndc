@@ -1,15 +1,18 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import { PropsWithChildren } from "react";
+import { revalidateTagAction } from "./actions";
 
 type Props = {
-  onClick: () => void;
+  tag: string;
 };
 
-const RevalidateButton = ({ onClick }: Props) => {
+const RevalidateButton = ({ children, tag }: PropsWithChildren<Props>) => {
+  console.log("==> Revalidating: ", tag);
   return (
-    <Button onClick={() => onClick()} variant={"destructive"}>
-      Revalidate cats
+    <Button onClick={() => revalidateTagAction(tag)} variant={"destructive"}>
+      {children}
     </Button>
   );
 };
