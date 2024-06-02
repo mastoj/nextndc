@@ -13,6 +13,7 @@ import Me from "./me.mdx";
 import PairUp from "./pair-up.mdx";
 import PPRAndStreaming from "./ppr-and-streaming.mdx";
 import RSC from "./rsc.mdx";
+import ServerActions from "./server-actions.mdx";
 import SpectrumOfApplications from "./spectrum-of-applications.mdx";
 import TellAndShow from "./tell-and-show.mdx";
 import TimingIsBad from "./timing-is-bad.mdx";
@@ -36,6 +37,7 @@ export const slideMap: Record<number, React.ReactNode> = [
   RSC,
   Internationalization,
   FeatureToggling,
+  ServerActions,
   Caching,
   ErrorHandling,
   PPRAndStreaming,

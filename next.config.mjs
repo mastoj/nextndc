@@ -27,6 +27,11 @@ const nextConfig = {
         source: '/slides',
         destination: '/slides/1',
         permanent: false
+      },
+      {
+        source: '/',
+        destination: '/slides/1',
+        permanent: false
       }
     ]
   },

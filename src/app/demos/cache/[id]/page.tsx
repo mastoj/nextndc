@@ -50,13 +50,13 @@ const CatImage = async ({ revalidationTime }: { revalidationTime: number }) => {
   const catData = await getRandomCat(revalidationTime);
   return (
     <div className="block gap-2 h-full w-full">
-      <div className="h-[80%] overflow-hidden">
+      <div className="h-[80%] overflow-hidden p-4">
         <Image
           src={catData.url}
           alt="Cat image"
           width={catData.width}
           height={catData.height}
-          className="object-cover"
+          className="object-contain max-w-full max-h-full shadow-lg rounded-lg"
         />
       </div>
       <div className="h-[20%] flex flex-row justify-between">

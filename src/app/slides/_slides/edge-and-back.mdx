@@ -1,6 +1,8 @@
 import Image from 'next/image'
+import { ImageSwitch } from '../_components/image-switch.tsx'
 import { Notes } from '../_components/notes.tsx'
 import { Column, MainSlide, TwoColumns } from '../_components/slide-layouts.tsx'
+import edgeExplained from './images/edge-explained.png'
 import edge from './images/edge.webp'
 
 
@@ -12,7 +14,11 @@ import edge from './images/edge.webp'
   </Column>
 
   <Column className="flex flex-row justify-center items-center">
-    <Image src={edge} alt="Edge"/>
+    <ImageSwitch images={[
+      <Image key={edge.src} src={edge} alt="Edge"/>,
+      <Image key={edgeExplained.src} src={edgeExplained} alt="Edge explained"/>
+    ]} />
+
   </Column>
 </TwoColumns>
 

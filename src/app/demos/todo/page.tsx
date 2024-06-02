@@ -1,4 +1,4 @@
-import TodoContainer from "../../components/todo/todo-container";
+import TodoContainer from "@/components/todo/todo-container";
 
 export default function Home() {
   return (

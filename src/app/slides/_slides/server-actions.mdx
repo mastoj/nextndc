@@ -1,0 +1,29 @@
+
+import Image from 'next/image'
+import Link from 'next/link'
+import { Notes } from '../_components/notes.tsx'
+import { Column, MainSlide, TwoColumns } from '../_components/slide-layouts.tsx'
+import serverActions from './images/server-actions.png'
+
+<TwoColumns>
+  <Column className="flex flex-col justify-center items-center gap-4">
+  
+    # Server actions
+
+    <div className="flex flex-row gap-2 mt-8 w-full justify-center">
+      <Link onClick={(e) => e.stopPropagation()} href="/demos/server-actions">
+        Server actions demo
+      </Link>
+    </div>
+  </Column>
+
+  <Column className="flex justify-center items-center">
+    <Image key={serverActions.src} src={serverActions} />
+  </Column>
+</TwoColumns>
+
+<Notes>
+Oh the drama! When server actions was announced it was a lot of fuzz. Everything from php has it, dotnet had these things already with webforms. I won't deny that any of those technologies has it, but not all innovations has to be completely new. I think it is perfectly fine if you take something from history and make it better, which I think next.js has done with server actions. I did webforms back in the days, and yes there was way to communicate between client and server, but webforms also hijacks a lot of the web which at least made it hard for me.
+
+Server actions in next.js is really super simple, and I don't understand the controversy around them. All it gives you is basically a simple way to communicate with the server without having to write some boilerplate code. There is slightly more to it, but that is the core piece of it from my perspective. 
+</Notes>

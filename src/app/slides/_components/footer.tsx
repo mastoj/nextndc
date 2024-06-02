@@ -78,11 +78,8 @@ const SlidesFooter = (props: Props) => {
   if (showToolbar) newSearchParams.delete("toolbar");
   else newSearchParams.set("toolbar", "true");
   const toggleToolbarUrl = `${pathname}?${newSearchParams.toString()}`;
-
-  console.log("==> Show toolbar: ", showToolbar, toggleToolbarUrl);
-
   return (
-    <div className="grid grid-cols-2 md:grid-cols-3 text-muted-foreground text-xs md:text-base z-50">
+    <div className="grid grid-cols-2 md:grid-cols-3 text-muted-foreground text-xs md:text-base z-50 p-4">
       <div>@TomasJansson</div>
       <Link
         href="https://github.com/mastoj/nextndc"
