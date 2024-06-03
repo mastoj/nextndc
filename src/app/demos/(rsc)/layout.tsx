@@ -2,7 +2,7 @@ import { PropsWithChildren } from "react";
 
 const RSCLayout = ({ children }: PropsWithChildren) => {
   return (
-    <div className="container flex flex-col h-full justify-center max-w-screen-md">
+    <div className="container flex flex-col h-screen w-screen justify-center">
       {children}
     </div>
   );
