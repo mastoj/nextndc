@@ -17,7 +17,7 @@ const Content = async () => {
 };
 const StaticStreamingPage = async ({ searchParams }: Props) => {
   return (
-    <div className="w-full">
+    <div className="">
       StaticStreamingPage:{" "}
       <Suspense>
         <Content />
