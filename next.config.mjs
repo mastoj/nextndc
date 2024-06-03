@@ -36,6 +36,9 @@ const nextConfig = {
     ]
   },
   pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
+  experimental: {
+    ppr: true,
+  },
 };
 
 export default withVercelToolbar()(withMDX(nextConfig));

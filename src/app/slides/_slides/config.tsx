@@ -12,6 +12,7 @@ import Intro from "./intro.mdx";
 import Me from "./me.mdx";
 import PairUp from "./pair-up.mdx";
 import PPRAndStreaming from "./ppr-and-streaming.mdx";
+import Routing from "./routing.mdx";
 import RSC from "./rsc.mdx";
 import ServerActions from "./server-actions.mdx";
 import SpectrumOfApplications from "./spectrum-of-applications.mdx";
@@ -34,6 +35,7 @@ export const slideMap: Record<number, React.ReactNode> = [
   SpectrumOfApplications,
   WhatDidWeLearn,
   EdgeAndBack,
+  Routing,
   RSC,
   Internationalization,
   FeatureToggling,

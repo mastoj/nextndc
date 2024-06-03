@@ -25,15 +25,17 @@
       "@/*": [
         "./src/*"
       ]
-    }
+    },
+    "target": "ES2017"
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "src/app/slides/_slides/me.mdx"
-, "src/app/slides/_slides/server-actions.mdx"  ],
+    "src/app/slides/_slides/me.mdx",
+    "src/app/slides/_slides/server-actions.mdx"
+  ],
   "exclude": [
     "node_modules"
   ]

@@ -1,7 +1,26 @@
+import Image from 'next/image'
+import Link from 'next/link'
 import { Notes } from '../_components/notes.tsx'
-import { MainSlide } from '../_components/slide-layouts.tsx'
+import { Column, MainSlide, TwoColumns } from '../_components/slide-layouts.tsx'
+import ppr from "./images/ppr.png"
 
-# Partial Prerendering and Streaming 
+<TwoColumns>
+  <Column className="flex flex-col justify-center items-center gap-4">
+  
+    # Partial Prerendering and Streaming 
+
+    <div className="flex flex-row gap-2 mt-8 w-full justify-center">
+      <Link onClick={(e) => e.stopPropagation()} href="/demos/streaming">
+        Streaming demo
+      </Link>
+    </div>
+
+  </Column>
+
+  <Column className="flex flex-row justify-center items-center ">
+    <Image src={ppr} alt="PPR"/>
+  </Column>
+</TwoColumns>
 
 <Notes>
 TBD

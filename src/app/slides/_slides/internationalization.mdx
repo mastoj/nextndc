@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import { Notes } from '../_components/notes.tsx'
 import { Column, MainSlide, TwoColumns } from '../_components/slide-layouts.tsx'
 import globe from './images/globe.png'
@@ -8,6 +9,12 @@ import globe from './images/globe.png'
   <Column className="flex flex-col justify-center items-center gap-4">
   
     # Internationalization
+
+    <div className="flex flex-row gap-2 mt-8 w-full justify-center">
+      <Link onClick={(e) => e.stopPropagation()} href="/demos/i18n">
+        Middleware demo
+      </Link>
+    </div>
 
   </Column>
 
@@ -21,9 +28,3 @@ When we started out with using app router there was no framework or nothing avai
 
 So what did we do. Our solution supports a couple of different scenarios. We support language in cookie and also domain, we had to have a solution for that since we don't have market specific domains in the preview environment, instead we have a route that is used to set a cookie to switch between the markets.
 </Notes>
-
-export default ({children}) => {
-  return <MainSlide>
-    {children}
-  </MainSlide>
-}
