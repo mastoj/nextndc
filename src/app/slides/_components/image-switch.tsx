@@ -20,7 +20,7 @@ export const ImageSwitch = ({ images }: Props) => {
       setCurrentImage(currentImage + 1);
     };
     const prevImage = () => {
-      setCurrentImage(currentImage - 1 + images.length);
+      setCurrentImage(currentImage - 1);
     };
     // Register a listener for the custom "forward" on the window object
     window.addEventListener("forward", nextImage);
