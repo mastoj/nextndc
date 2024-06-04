@@ -54,9 +54,9 @@ const LanguagePage = ({ params: { language } }: Props) => {
       </div>
       <div className="mt-auto text-2xl flex flex-row gap-2 pb-8">
         {Object.entries(languageLookup).map(([key, value]) => (
-          <Link key={key} href={`/demos/i18n/${key}`} prefetch={false}>
+          <a key={key} href={`/demos/i18n/${key}`}>
             {value.flag}
-          </Link>
+          </a>
         ))}
       </div>
     </div>
