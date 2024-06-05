@@ -20,7 +20,12 @@ const nextConfig = {
     },
   },
   images: {
-    domains: ['cdn2.thecatapi.com'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '**'
+      }
+    ]
   },
   async redirects() {
     return [
