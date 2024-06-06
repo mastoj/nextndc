@@ -21,36 +21,52 @@ import TimingIsBad from "./timing-is-bad.mdx";
 import WhatDidWeLearn from "./what-did-we-learn.mdx";
 import WhyNext from "./why-next.mdx";
 
-export const slideMap: Record<number, React.ReactNode> = [
-  Intro,
-  Background,
-  Me,
-  HowDoYouStart,
-  DontSellTech,
-  DoTheMath,
-  PairUp,
-  TellAndShow,
-  TimingIsBad,
-  WhyNext,
-  SpectrumOfApplications,
-  WhatDidWeLearn,
-  EdgeAndBack,
-  Routing,
-  RSC,
-  Internationalization,
-  FeatureToggling,
-  ServerActions,
-  Caching,
-  ErrorHandling,
-  PPRAndStreaming,
-  Closing,
-]
-  .map((Slide, index) => ({ [index + 1]: <Slide key={index} /> }))
+const components = [
+  { name: "Intro", component: Intro },
+  { name: "Background", component: Background },
+  { name: "Me", component: Me },
+  { name: "HowDoYouStart", component: HowDoYouStart },
+  { name: "DontSellTech", component: DontSellTech },
+  { name: "DoTheMath", component: DoTheMath },
+  { name: "PairUp", component: PairUp },
+  { name: "TellAndShow", component: TellAndShow },
+  { name: "TimingIsBad", component: TimingIsBad },
+  { name: "WhyNext", component: WhyNext },
+  { name: "SpectrumOfApplications", component: SpectrumOfApplications },
+  { name: "WhatDidWeLearn", component: WhatDidWeLearn },
+  { name: "EdgeAndBack", component: EdgeAndBack },
+  { name: "Routing", component: Routing },
+  { name: "RSC", component: RSC },
+  { name: "Internationalization", component: Internationalization },
+  { name: "FeatureToggling", component: FeatureToggling },
+  { name: "ServerActions", component: ServerActions },
+  { name: "Caching", component: Caching },
+  { name: "ErrorHandling", component: ErrorHandling },
+  { name: "PPRAndStreaming", component: PPRAndStreaming },
+  { name: "Closing", component: Closing },
+] as const;
+
+export type SlideName = (typeof components)[number]["name"];
+
+export const slideMap: Record<
+  number,
+  { name: SlideName; component: React.ReactNode }
+> = components
+  .map(({ name, component: Slide }, index) => ({
+    [index + 1]: { name: name, component: <Slide key={index} /> },
+  }))
   .reduce((acc, slide) => ({ ...acc, ...slide }), {});
 
 export const getNumberOfSlides = () => Object.keys(slideMap).length;
 export const hasMoreSlides = (slideId: number) => slideId < getNumberOfSlides();
 
 export const Slide = ({ slideId }: { slideId: number }) => {
-  return slideMap[slideId];
+  return slideMap[slideId].component;
+};
+
+export const getSlidePathFromName = (slideName: SlideName) => {
+  const entry = Object.entries(slideMap).find(
+    ([, { name }]) => name === slideName
+  );
+  return `/slides/${entry?.[0]}`;
 };

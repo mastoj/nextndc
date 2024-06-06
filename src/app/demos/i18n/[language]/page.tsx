@@ -1,3 +1,4 @@
+import { getSlidePathFromName } from "@/app/slides/_slides/config";
 import Image from "next/image";
 import Link from "next/link";
 import middleware from "../_images/middleware.png";
@@ -45,7 +46,9 @@ const LanguagePage = ({ params: { language } }: Props) => {
       <div className="grid grid-cols-2 p-8 gap-4 max-w-screen">
         <div className="flex flex-col justify-center items-center">
           <Image src={middleware} alt="Middleware" />
-          <Link href="/slides/15">Slides</Link>
+          <Link href={getSlidePathFromName("Internationalization")}>
+            Slides
+          </Link>
         </div>
         <div className="flex flex-col justify-center items-center text-7xl">
           {languageLookup[actualLanguage].flag}

@@ -1,4 +1,5 @@
 import { Column, TwoColumns } from "@/app/slides/_components/slide-layouts";
+import { getSlidePathFromName } from "@/app/slides/_slides/config";
 import Link from "next/link";
 import { ClientDemo } from "./_components/client-demo";
 import { FormDemo } from "./_components/form-demo";
@@ -14,7 +15,10 @@ const ServerActionsPage = async (props: Props) => {
         </Column>
         <Column>
           <ClientDemo />
-          <Link href="/slides/17" className="self-center">
+          <Link
+            href={getSlidePathFromName("ServerActions")}
+            className="self-center"
+          >
             Slides
           </Link>
         </Column>

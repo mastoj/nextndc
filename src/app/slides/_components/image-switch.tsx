@@ -27,6 +27,9 @@ export const ImageSwitch = ({ images }: Props) => {
     // Register a listener for the custom "back" on the window object
     window.addEventListener("back", prevImage);
     console.log("navigation-override-start", currentImage, images.length);
+    if (currentImage < 0) {
+      resumeProgress();
+    }
     if (currentImage >= images.length - 1) {
       resumeProgress();
       console.log("navigation-override-end");
