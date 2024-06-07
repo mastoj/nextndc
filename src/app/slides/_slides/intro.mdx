@@ -2,14 +2,15 @@ import { Notes } from '../_components/notes.tsx'
 import { MainSlide } from '../_components/slide-layouts.tsx'
 import homepage from './images/homepage.png'
 
-<div className="text-lg md:text-5xl leading-normal md:leading-loose">
+<div className="text-lg md:text-5xl leading-normal md:leading-loose container self-end text-right justify-self-end">
 # What we learned rebuilding the largest Nordic electronic retail website in Next.js 14 on Vercel?
-</div>
-<div className="text-white/50 self-end flex flex-col">
-  <div className="flex flex-1 justify-end text-right">
-  <a onClick={(e) => {e.stopPropagation()}} href="https://www.twitter.com/TomasJansson">@TomasJansson</a>
+
+  <div className="text-white/50 self-end flex flex-col text-lg items-end">
+    <div className="flex flex-1">
+    <a onClick={(e) => {e.stopPropagation()}} href="https://www.twitter.com/TomasJansson">@TomasJansson</a>
+    </div>
+    <span>Principal Software Engineer, Elkjøp Nordic</span>
   </div>
-  <span>Principal Software Engineer, Elkjøp Nordic</span>
 </div>
 
 <Notes>
