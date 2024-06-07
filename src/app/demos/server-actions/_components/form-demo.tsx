@@ -2,7 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { useFormStatus } from "react-dom";
 import { toast } from "sonner";
 import { handleFormAction } from "./actions";
@@ -19,12 +19,13 @@ const SubmitButton = () => {
 };
 
 export const FormDemo = (props: Props) => {
+  const [name, setName] = useState("");
   const formRef = useRef<HTMLFormElement>(null);
   const handleSubmit = async (formData: FormData) => {
     const result = await handleFormAction(formData);
     if (result.success) {
       toast.success(result.message);
-      formRef.current?.reset();
+      setName("");
     } else {
       toast.error(result.message);
     }
@@ -37,7 +38,14 @@ export const FormDemo = (props: Props) => {
     >
       <div className="flex flex-col gap-2">
         <Label htmlFor="name">Name</Label>
-        <Input id="name" name="name" type="text" className="max-w-sm" />
+        <Input
+          id="name"
+          name="name"
+          type="text"
+          className="max-w-sm"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+        />
       </div>
       <div className="flex flex-row">
         <SubmitButton />
