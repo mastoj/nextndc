@@ -1,0 +1,31 @@
+import Image from 'next/image'
+import Link from 'next/link'
+import { Notes } from '../_components/notes.tsx'
+import { Column, MainSlide, TwoColumns } from '../_components/slide-layouts.tsx'
+import layouts from './images/nested-layouts-ui.avif'
+
+
+<TwoColumns>
+  <Column className="flex flex-col justify-center items-center gap-4">
+  
+    # Pages and layouts
+
+    <div className="flex flex-row gap-2 mt-8 w-full justify-center">
+      <Link onClick={(e) => e.stopPropagation()} href="/demos/layout">
+        Pages and layouts demo
+      </Link>
+    </div>
+
+  </Column>
+
+  <Column className="flex flex-row justify-center items-center max-h-screen">
+    <Image src={layouts} alt="Example routing" className="py-12 object-contain max-h-screen"/>
+  </Column>
+</TwoColumns>
+
+<Notes>
+Let's dig a little bit deeper in pages and layouts. As mentioned in the previous slide, layouts are a way to define the layout for a set of pages. The important part here is that layouts can be nested. If you are leveraging nextjs link component and client side navigation only the part in the layout will change when navigating between pages. This is gives a very smooth and stable user experience where you can have this main shell and only swap out the content that really changes.
+
+So let's what that can look like.
+
+</Notes>

@@ -23,7 +23,7 @@ const FadeInComponent = ({
     <div
       className={cn(
         "transition-all duration-1000 ease-in-out",
-        isMounted ? "opacity-100" : "opacity-0",
+        isMounted ? "opacity-100" : "opacity-0 bg-slate-500",
         hasTransitionedIn ? "opacity-100" : ""
       )}
     >

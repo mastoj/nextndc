@@ -9,6 +9,7 @@ import FeatureToggling from "./feature-toggling.mdx";
 import HowDoYouStart from "./how-do-you-start.mdx";
 import Internationalization from "./internationalization.mdx";
 import Intro from "./intro.mdx";
+import Layout from "./layout.mdx";
 import Me from "./me.mdx";
 import PairUp from "./pair-up.mdx";
 import PPRAndStreaming from "./ppr-and-streaming.mdx";
@@ -36,6 +37,7 @@ const components = [
   { name: "WhatDidWeLearn", component: WhatDidWeLearn },
   { name: "EdgeAndBack", component: EdgeAndBack },
   { name: "Routing", component: Routing },
+  { name: "Layout", component: Layout },
   { name: "RSC", component: RSC },
   { name: "Internationalization", component: Internationalization },
   { name: "FeatureToggling", component: FeatureToggling },
