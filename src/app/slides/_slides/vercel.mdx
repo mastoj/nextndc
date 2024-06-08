@@ -1,0 +1,43 @@
+import { RscDemoLinks } from "@/components/demo/rsc-demo-links";
+import Image from 'next/image';
+import Link from 'next/link';
+import { ImageSwitch } from '../_components/image-switch.tsx';
+import { Notes } from '../_components/notes.tsx';
+import { Column, MainSlide, TwoColumns } from '../_components/slide-layouts.tsx';
+import deployments from './images/deployments.png';
+import speedinsights from './images/speed_insights.png';
+
+<TwoColumns>
+  <Column className="flex flex-col justify-center items-center gap-4">
+  
+    # Vercel features
+
+  </Column>
+
+  <Column className="flex flex-row justify-center items-center">
+    <ImageSwitch images={[
+      (<svg 
+        key="vercel-logo"
+        width="76"
+        height="65"
+        viewBox="0 0 76 65"
+        fill="none" xmlns="http://www.w3.org/2000/svg"><path
+        d="M37.5274 0L75.0548 65H0L37.5274 0Z" fill="#ffffff"/></svg>),
+      (<Image key={speedinsights.src} src={speedinsights} alt="Speed insights"/>),
+      (<Image key={deployments.src} src={deployments} alt="Deployments"/>),
+    ]} />
+  </Column>
+</TwoColumns>
+
+
+<Notes>
+
+Since we do host on Vercel I thought I would mention some of the actual features I really like about Vercel.
+
+First we have preview builds. Anything you push to vercel becomes its own deployment that you can visit. This is very useful for sanity checks, debug issues and showing features that are not live yet.
+
+Secondly we have the speedinsights. The speedinsights metrics that Vercel has is based on the core web vitals and is a very good way of know how the application actually performs in the real world compared to the light house score. The also give you metrics much faster than what the official pagespeed insights pages give you. You can even see deployment annotation in the graphs to pinpoint a deployment if the metrics starts to move in the wrong direction. The speedinsights also lets you see the different metrics and you can also filter down on the route or path to really find a specific page if that is where you might have a problem.
+
+The toolbar. We mainly use if for feature toggling at the moment, but there are also features like layout shift tracking, accessibility and comments. The comments part is something I really believe in, but it really needs to fit the way you work to be effective. I do believe it will be more effective now when we have delivered, so I hope we can use it more in the future.
+
+</Notes>

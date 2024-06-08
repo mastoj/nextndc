@@ -4,7 +4,6 @@ import Closing from "./closing.mdx";
 import DoTheMath from "./do-the-math.mdx";
 import DontSellTech from "./dont-sell-tech.mdx";
 import EdgeAndBack from "./edge-and-back.mdx";
-import ErrorHandling from "./error-handling.mdx";
 import FeatureToggling from "./feature-toggling.mdx";
 import HowDoYouStart from "./how-do-you-start.mdx";
 import Internationalization from "./internationalization.mdx";
@@ -17,8 +16,10 @@ import Routing from "./routing.mdx";
 import RSC from "./rsc.mdx";
 import ServerActions from "./server-actions.mdx";
 import SpectrumOfApplications from "./spectrum-of-applications.mdx";
+import Summary from "./summary.mdx";
 import TellAndShow from "./tell-and-show.mdx";
 import TimingIsBad from "./timing-is-bad.mdx";
+import Vercel from "./vercel.mdx";
 import WhatDidWeLearn from "./what-did-we-learn.mdx";
 import WhyNext from "./why-next.mdx";
 
@@ -43,8 +44,10 @@ const components = [
   { name: "FeatureToggling", component: FeatureToggling },
   { name: "ServerActions", component: ServerActions },
   { name: "Caching", component: Caching },
-  { name: "ErrorHandling", component: ErrorHandling },
+  // { name: "ErrorHandling", component: ErrorHandling },
   { name: "PPRAndStreaming", component: PPRAndStreaming },
+  { name: "Vercel", component: Vercel },
+  { name: "Summary", component: Summary },
   { name: "Closing", component: Closing },
 ] as const;
 
