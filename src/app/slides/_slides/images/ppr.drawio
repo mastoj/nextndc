@@ -1,34 +1,34 @@
 <mxfile host="65bd71144e">
     <diagram id="mhgaRPr_KfN_I3Dz4703" name="Page-1">
-        <mxGraphModel dx="727" dy="352" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="727" dy="456" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
-                <mxCell id="2" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#7885FF;arcSize=4;" vertex="1" parent="1">
+                <mxCell id="2" value="" style="rounded=1;whiteSpace=wrap;html=1;arcSize=4;fillColor=#3B3147;" parent="1" vertex="1">
                     <mxGeometry x="110" y="60" width="540" height="340" as="geometry"/>
                 </mxCell>
-                <mxCell id="3" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#7885FF;arcSize=4;" vertex="1" parent="1">
+                <mxCell id="3" value="" style="rounded=1;whiteSpace=wrap;html=1;arcSize=4;fillColor=#3B3147;" parent="1" vertex="1">
                     <mxGeometry x="120" y="70" width="510" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="4" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#7885FF;arcSize=4;" vertex="1" parent="1">
+                <mxCell id="4" value="" style="rounded=1;whiteSpace=wrap;html=1;arcSize=4;fillColor=#3B3147;" parent="1" vertex="1">
                     <mxGeometry x="120" y="120" width="260" height="160" as="geometry"/>
                 </mxCell>
-                <mxCell id="5" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#7885FF;arcSize=4;" vertex="1" parent="1">
+                <mxCell id="5" value="" style="rounded=1;whiteSpace=wrap;html=1;arcSize=4;fillColor=#3B3147;" parent="1" vertex="1">
                     <mxGeometry x="390" y="120" width="240" height="270" as="geometry"/>
                 </mxCell>
-                <mxCell id="6" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FF9494;arcSize=4;" vertex="1" parent="1">
+                <mxCell id="6" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#001DBC;arcSize=4;fontColor=#ffffff;strokeColor=#0000BC;opacity=30;strokeWidth=3;" parent="1" vertex="1">
                     <mxGeometry x="400" y="130" width="130" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="7" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FF9494;arcSize=4;" vertex="1" parent="1">
+                <mxCell id="7" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#001DBC;arcSize=4;fontColor=#ffffff;strokeColor=#0000BC;opacity=30;strokeWidth=3;" parent="1" vertex="1">
                     <mxGeometry x="590" y="75" width="30" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="8" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FF9494;arcSize=4;" vertex="1" parent="1">
+                <mxCell id="8" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#001DBC;arcSize=4;fontColor=#ffffff;strokeColor=#0000BC;opacity=30;strokeWidth=3;" parent="1" vertex="1">
                     <mxGeometry x="550" y="75" width="30" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="9" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FF9494;arcSize=4;" vertex="1" parent="1">
+                <mxCell id="9" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#001DBC;arcSize=4;fontColor=#ffffff;strokeColor=#0000BC;opacity=30;strokeWidth=3;" parent="1" vertex="1">
                     <mxGeometry x="120" y="360" width="30" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="10" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FF9494;arcSize=4;" vertex="1" parent="1">
+                <mxCell id="10" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#001DBC;arcSize=4;fontColor=#ffffff;strokeColor=#0000BC;opacity=30;strokeWidth=3;" parent="1" vertex="1">
                     <mxGeometry x="160" y="360" width="30" height="30" as="geometry"/>
                 </mxCell>
             </root>
