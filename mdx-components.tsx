@@ -11,7 +11,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     ul: ({ children }) => (
       <ul className="flex flex-col gap-4 text-xl">{children}</ul>
     ),
-    p: ({ children }) => <p className="text-xl italic">{children}</p>,
+    p: ({ children }) => <p className="text-xl italic mt-4">{children}</p>,
     ...components,
   };
 }
