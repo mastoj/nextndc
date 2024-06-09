@@ -9,7 +9,7 @@ const getViewportSize = () => {
   return { maxX, maxY };
 };
 
-const Card = () => {
+const Card = ({ index }: { index: number }) => {
   const { maxX, maxY } = getViewportSize();
   const { randomX, randomY } = {
     randomX: Math.random() * maxX,
@@ -17,8 +17,8 @@ const Card = () => {
   };
   return (
     <div
-      className="absolute w-32 h-40 bg-green-400 rounded-lg shadow-lg z-0 animate-bounce"
-      style={{ top: randomY, left: randomX }}
+      className="absolute w-32 h-40 bg-green-400 rounded-lg shadow-lg animate-bounce"
+      style={{ top: randomY, left: randomX, zIndex: index }}
     >
       &nbsp;
     </div>
@@ -29,7 +29,7 @@ const Cards = (props: Props) => {
   const [cards, setCards] = React.useState<React.ReactNode[]>([]);
   useEffect(() => {
     const interval = setInterval(() => {
-      setCards([...cards, <Card key={cards.length} />]);
+      setCards([...cards, <Card key={cards.length} index={cards.length} />]);
     }, 700);
     return () => clearInterval(interval);
   }, [cards]);

@@ -1,4 +1,4 @@
-import { Background } from "../_slides/background";
+import Background from "./background.mdx";
 import Caching from "./caching.mdx";
 import Closing from "./closing.mdx";
 import DoTheMath from "./do-the-math.mdx";

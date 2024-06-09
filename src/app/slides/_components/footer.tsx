@@ -46,19 +46,18 @@ const SlidesFooter = (props: Props) => {
       // Liste for key "t" to toggle toolbar
       if (event.key === "t") {
         router.push(toggleToolbarUrl);
-      }
-      if (event.key === "e") {
+      } else if (event.key === "e") {
         forward();
         router.push(lastUrl);
-      }
-      if (event.key === "s") {
+      } else if (event.key === "s") {
         back();
         router.push(firstUrl);
-      }
-      if (event.key === "ArrowRight" || (event.key === "Enter" && nextUrl)) {
+      } else if (
+        (event.key === "ArrowRight" || event.key === "Enter") &&
+        nextUrl
+      ) {
         nextSlide();
-      }
-      if (event.key === "ArrowLeft" && prevUrl) {
+      } else if (event.key === "ArrowLeft" && prevUrl) {
         prevSlide();
       }
     };

@@ -6,7 +6,7 @@ import SlideLink from "./_components/slide-link";
 const DemoLayout = ({ children }: PropsWithChildren) => {
   return (
     <div className="grid grid-cols-[400px_auto] h-screen w-screen">
-      <div className="border-r h-full shadow-md bg-primary/10 p-8">
+      <div className="flex flex-col border-r h-screen shadow-md bg-primary/10 p-8">
         <FadeInComponent>
           <Menu />
         </FadeInComponent>
