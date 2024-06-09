@@ -14,6 +14,7 @@ const animations = [
   "animate-spin-slow",
   "animate-pulse",
   "animate-wiggle",
+  "animate-accordion",
 ];
 
 const smileys = ["😊", " 😎", " 🤓", " 🤩", " 🥳", "🫠", "🍾"];

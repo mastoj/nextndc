@@ -72,12 +72,21 @@ const config = {
           "0%, 100%": { transform: "rotate(-3deg)" },
           "50%": { transform: "rotate(3deg)" },
         },
+        accordion: {
+          "0%, 100%": { height: "160px", width: "128px" },
+          "50%": {
+            height: "40px",
+            width: "40px",
+            transform: "translateY(60px) translateX(44px)",
+          },
+        },
       },
       animation: {
         "spin-slow": "spin 3s linear infinite",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         wiggle: "wiggle 1s ease-in-out infinite",
+        accordion: "accordion 1s ease-out infinite",
       },
     },
   },
