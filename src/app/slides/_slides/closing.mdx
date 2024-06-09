@@ -1,8 +1,9 @@
+import Cards from '../_components/cards'
 import { Notes } from '../_components/notes.tsx'
 import { MainSlide } from '../_components/slide-layouts.tsx'
 import homepage from './images/homepage.png'
 
-<div className="text-lg md:text-5xl leading-normal md:leading-loose container self-end text-right justify-self-end">
+<div className="text-lg z-50 md:text-5xl leading-normal md:leading-loose container self-end text-right justify-self-end">
 
   # Thank you!
 
@@ -17,6 +18,8 @@ import homepage from './images/homepage.png'
 <Notes>
   With that I would like to thank you all for coming and spent some time with me. I do think there is time for a couple of questions if there are any? I can also stay around for a couple of minutes after the session and will be here for the rest of the conference. Feel free to reach out here or on twitter, linkedin or whatever platform you prefer and manage to find me on.
 </Notes>
+
+<Cards />
 
 export default ({children}) => {
   return <MainSlide imgUrl={homepage}>
