@@ -17,7 +17,7 @@ const Card = () => {
   };
   return (
     <div
-      className="absolute w-32 h-40 bg-green-400 rounded-lg shadow-lg z-0"
+      className="absolute w-32 h-40 bg-green-400 rounded-lg shadow-lg z-0 animate-bounce"
       style={{ top: randomY, left: randomX }}
     >
       &nbsp;
@@ -30,7 +30,7 @@ const Cards = (props: Props) => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCards([...cards, <Card key={cards.length} />]);
-    }, 1000);
+    }, 700);
     return () => clearInterval(interval);
   }, [cards]);
   return <>{cards}</>;
