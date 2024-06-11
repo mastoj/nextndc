@@ -74,7 +74,6 @@ const CachePage = async ({ params: { id } }: Props) => {
   return (
     <TwoColumns>
       <Column>
-        <span>Page time: {new Date().toLocaleTimeString()}</span>
         <RevalidateButton tag="cats">Revalidate all</RevalidateButton>
         <CacheLinks />
       </Column>
