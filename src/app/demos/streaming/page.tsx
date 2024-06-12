@@ -1,4 +1,5 @@
 import { Suspense } from "react";
+import FadeInComponent from "../layout/_components/fade-in-component";
 
 type Props = {
   searchParams: { [key: string]: string | string[] | undefined };
@@ -7,7 +8,11 @@ type Props = {
 const QueryParamComponent = async ({ searchParams }: Props) => {
   // Sleep for 2 seconds
   await new Promise((resolve) => setTimeout(resolve, 2000));
-  return <div>Hello query! {JSON.stringify(searchParams)}</div>;
+  return (
+    <FadeInComponent>
+      <div>Hello query! {JSON.stringify(searchParams)}</div>
+    </FadeInComponent>
+  );
 };
 
 const Content = async () => {
@@ -17,8 +22,8 @@ const Content = async () => {
 };
 const StaticStreamingPage = async ({ searchParams }: Props) => {
   return (
-    <div className="">
-      StaticStreamingPage:{" "}
+    <div className="h-full grid grid-flow-row justify-between *:border *:border-blue-700 py-8 gap-2">
+      StaticStreamingPage:
       <Suspense>
         <Content />
       </Suspense>

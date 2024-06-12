@@ -6,9 +6,9 @@ type Props = {};
 
 const StreamingLayout = ({ children }: PropsWithChildren) => {
   return (
-    <div className="flex flex-col justify-center items-center gap-8">
+    <div className="h-screen flex flex-col justify-center items-center gap-8 py-8">
       <h1 className="text-8xl">Streaming</h1>
-      {children}
+      <div className="flex-1">{children}</div>
       <Link href={getSlidePathFromName("PPRAndStreaming")}>Slides</Link>
     </div>
   );
